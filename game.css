@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Stylish','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nameDisplay{
+  width: 100%;
+  height: 10vh;
+  background: #2E8973;
+  position: relative;
+}
+
+.back{
+  width: 100%;
+  height: 10vh;
+}
+
+.nameDisplay .back a{
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+
+.back a img{
+  width: 30px;
+  height: 30px;
+}
+
+.nameDisplay .name{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameDisplay .score{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score span{
+  color: #fff;
+  font-size: 22px;
+}
+
+.container{
+  width: 70%;
+  margin: 50px auto;
+}
+
+
+.question{
+  width: 100%;
+  height: 25vh;
+  background: #f3d477;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #000;
+  position: relative;
+  padding: 15px;
+  text-align: center;
+}
+
+.question .tag{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  font-size: 22px;
+  padding: 0 8px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 1px #000;
+}
+
+.options{
+  margin: 20px 0;
+}
+
+.option input[type="radio"]{
+  display: none;
+}
+
+.option label{
+  width: 100%;
+  border: 1px solid #2E8973;
+  color: #2E8973;
+  padding: 5px 20px;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.select label{
+  background: #42a5f5;
+  border: 2px solid #116bb4;
+  color: #fff;
+}
+
+.correct label{
+  background: #0da383;
+  border: 2px solid #036651;
+  color: #fff;
+}
+
+.wrong label{
+  background: #e53935;
+  border: 2px solid #960d0b;
+  color: #fff;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.check,.next{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 2px solid #2e8973;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #fff;
+  color: #2E8973;
+}
+
+.clicked{
+  background: #2E8973;
+  color: #fff;
+}
+
+.gamefinish{
+  display: flex;
+  justify-content: center;
+}
+
+.gameOver{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 2px solid #2e8973;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #2E8973;
+  color: #fff;
+  display: none;
+}
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+@media only screen and (max-width:500px){
+  .container{
+    width: 90%;
+  }
+  .nameDisplay .score{
+    margin-top:10px;
+    margin-right: 25px;
+  }
+  .option label{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:380px){
+  .question{
+    font-size: 22px;
+  }
+}
